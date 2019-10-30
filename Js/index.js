@@ -1,6 +1,6 @@
 function pegaCity (){
-    console.log("Olá");
-    return document.getElementById ('cidade').value;
+    console.log("Livio");
+     return document.getElementById ('cidade').value;
 }
 
 function montaLink (){
