@@ -11,3 +11,18 @@ function montaLink (){
     
     return comeco + recebeCity + final;
 }
+function pesquisa(){
+var consulta = new XMLHttpRequest();
+
+var url = montaLink();
+
+consulta.open('GET', url, true);
+
+consulta.onreadystatechange = function (e){
+    console.log(this.readyState);
+    if (this.readyState==4) {
+        console.log(this.response);
+    }
+}
+consulta.send();
+}
