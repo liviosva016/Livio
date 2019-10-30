@@ -1,5 +1,4 @@
 function pegaCity (){
-    console.log("Livio");
      return document.getElementById ('cidade').value;
 }
 
