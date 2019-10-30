@@ -20,7 +20,7 @@ consulta.open('GET', url, true);
 
 consulta.onreadystatechange = function (e){
     console.log(this.readyState);
-    if (this.readyState==4) {
+    if (this.readyState == 4) {
         console.log(this.response);
     }
 }
