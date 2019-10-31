@@ -26,3 +26,7 @@ consulta.onreadystatechange = function (e){
 }
 consulta.send();
 }
+
+function buscar (){
+    return document.getElementById('buscar')
+}
