@@ -28,5 +28,5 @@ consulta.send();
 }
 
 function buscar (){
-    return document.getElementById('buscar')
+    return document.getElementById('buscar').value;
 }
