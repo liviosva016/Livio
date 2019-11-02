@@ -21,7 +21,7 @@ resultado.open('GET', linkr, true);
 resultado.onreadystatechange = function (e){
     console.log(this.readyState);
     if (this.readyState == 4) {
-        console.log(this.response);
+        console.log = JSON.parse(this.response);
     }
 }
 resultado.send();
