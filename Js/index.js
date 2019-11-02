@@ -13,6 +13,7 @@ function montaLink (){
     
     return comeco + recebeCity + final;
 }
+
 function pesquisa(){
 var resultado = new XMLHttpRequest();
 
@@ -24,18 +25,27 @@ resultado.onreadystatechange = function (e){
     console.log(this.readyState);
     if (this.readyState == 4) {
         resposta = JSON.parse(this.response);
-        console.log = (JSON.parse(this.response));
+        console.log(JSON.parse(this.response));
     }
 }
 resultado.send();
 }
 
-function buscar (){
-    return document.getElementById('buscar').value;
+function nvOl(){
+    var armazenamento = document.createElement('ol');
+    armazenamento.setAttribute('id', 'lista_ordenada');
+
+    document.getElementById(procurar).appendChild(nvOl);
 }
 
-/*function pegaOl(){
-    var newOl= document.createElement ('ol');
-    newOl.setAttribute('id', 'lista_ordenada');
-    document.getElementById('procurar').appendChild('newOl');
-}*/
+function aparecer(idAparecer){
+    var novaLi = document.createElement("li");
+    novaLi.setAttribute('id', 'idAparecer');
+    
+    var nome = resposta.features[idAparecer];
+
+    var nvNome = document.createTextNode(nome);
+    novaLi.appendChild(nvNome);
+
+    document.getElementById('procurar').appendChild(novaLi);
+}
