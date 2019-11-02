@@ -14,7 +14,7 @@ function montaLink (){
 function pesquisa(){
 var resultado = new XMLHttpRequest();
 
-var url = montaLink();
+//var url = montaLink();
 
 resultado.open('GET', url, true);
 
