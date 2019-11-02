@@ -28,5 +28,6 @@ consulta.send();
 }
 
 function buscar (){
-    return document.getElementById('buscar').value;
+    console.log('funcionou');
+    //return document.getElementById('buscar').value;
 }
