@@ -2,6 +2,8 @@ function pegaCity (){
      return document.getElementById ('cidade').value;
 }
 
+var resposta;
+
 function montaLink (){
     var comeco = 'https://api.mapbox.com/geocoding/v5/mapbox.places/';
 
@@ -21,7 +23,8 @@ resultado.open('GET', linkr, true);
 resultado.onreadystatechange = function (e){
     console.log(this.readyState);
     if (this.readyState == 4) {
-        console.log = JSON.parse(this.response);
+        resposta = JSON.parse(this.response);
+        console.log = (JSON.parse(this.response));
     }
 }
 resultado.send();
