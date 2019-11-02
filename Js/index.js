@@ -30,3 +30,9 @@ resultado.send();
 function buscar (){
     return document.getElementById('buscar').value;
 }
+
+function ol(){
+    var newOl= document.createElement ('ol');
+    newOl.setAttribute('id', 'lista_ordenada');
+    document.getElementById('procurar').appendChild('newOl');
+}
