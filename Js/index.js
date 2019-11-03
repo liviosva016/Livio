@@ -66,8 +66,6 @@ function aparecer(idAparecer){
 }
 
 function mapinha(id){
-    //var latitude, longitude;
-    //var nome;
     latitude = resposta.features[id].geometry.coordinates[1];
     longitude = resposta.features[id].geometry.coordinates[0];
     nome = resposta.features[id].place_name;
