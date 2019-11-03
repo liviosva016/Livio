@@ -81,7 +81,7 @@ function mapinha(id){
     }).addTo(meuMapa);
    
     L.marker([latitude, longitude]).addTo(meuMapa)
-        .bindPopup("<b>Você está em " + nome).openPopup();
+        .bindPopup("<b>Você está em " + nome).openPopup();  
    
     L.circle([latitude, longitude], 400, {
         color: 'green',
