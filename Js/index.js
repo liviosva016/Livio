@@ -48,19 +48,19 @@ function nvOl(){
 }
 
 nvOl();
-    function aparecer(idAparecer){
-        var novaLi = document.createElement("li");
-        novaLi.setAttribute('id', idAparecer);
+function aparecer(idAparecer){
+    var novaLi = document.createElement("li");
+    novaLi.setAttribute('id', idAparecer);
         
-        var nome = resposta.features[idAparecer];
+    var nome = resposta.features[idAparecer];
 
-        var clik = document.createElement('a');
-        clik.setAttribute('onclick', '');
+    var clik = document.createElement('a');
+    clik.setAttribute('onclick', '');
 
-        var city = resposta.features[idAparecer].place_name;
+    var city = resposta.features[idAparecer].place_name;
 
-        var nvNome = document.createTextNode(city);
-        novaLi.appendChild(nvNome);
-        document.getElementById('procurar').appendChild(novaLi);
-    }
+    var nvNome = document.createTextNode(city);
+    novaLi.appendChild(nvNome);
+    document.getElementById('procurar').appendChild(novaLi);
+}
 
