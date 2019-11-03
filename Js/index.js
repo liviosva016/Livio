@@ -47,7 +47,7 @@ function nvOl(){
     document.getElementById('procurar').appendChild(armazena);
 }
 
-nvOl(){
+nvOl();
     function aparecer(idAparecer){
         var novaLi = document.createElement("li");
         novaLi.setAttribute('id', idAparecer);
@@ -63,5 +63,4 @@ nvOl(){
         novaLi.appendChild(nvNome);
         document.getElementById('procurar').appendChild(novaLi);
     }
-}
 
