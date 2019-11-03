@@ -26,26 +26,42 @@ resultado.onreadystatechange = function (e){
     if (this.readyState == 4) {
         resposta = JSON.parse(this.response);
         console.log(JSON.parse(this.response));
+        fFor();
     }
 }
 resultado.send();
 }
 
+function fFor(){
+    var corpo = resposta.features.length;
+
+    var i;
+    for(i=0; i<corpo; i++){
+        aparecer(i);
+    }
+}
+
 function nvOl(){
-    var armazenamento = document.createElement('ol');
-    armazenamento.setAttribute('id', 'lista_ordenada');
-
-    document.getElementById(procurar).appendChild(nvOl);
+    var armazena = document.createElement('ol');
+    armazena.setAttribute('id', 'lista_ordenada');
+    document.getElementById('procurar').appendChild(armazena);
 }
 
-function aparecer(idAparecer){
-    var novaLi = document.createElement("li");
-    novaLi.setAttribute('id', 'idAparecer');
-    
-    var nome = resposta.features[idAparecer];
+nvOl(){
+    function aparecer(idAparecer){
+        var novaLi = document.createElement("li");
+        novaLi.setAttribute('id', idAparecer);
+        
+        var nome = resposta.features[idAparecer];
 
-    var nvNome = document.createTextNode(nome);
-    novaLi.appendChild(nvNome);
+        var clik = document.createElement('a');
+        clik.setAttribute('onclick', '');
 
-    document.getElementById('procurar').appendChild(novaLi);
+        var city = resposta.features[idAparecer].place_name;
+
+        var nvNome = document.createTextNode(city);
+        novaLi.appendChild(nvNome);
+        document.getElementById('procurar').appendChild(novaLi);
+    }
 }
+
