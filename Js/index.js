@@ -90,4 +90,3 @@ function mapinha(id){
         fillOpacity: 0.5
     }).addTo(mymap).bindPopup("Você é estranho! Estás clicando em um círculo!");
 }
-}
