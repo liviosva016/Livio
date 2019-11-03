@@ -55,7 +55,7 @@ function aparecer(idAparecer){
     var nome = resposta.features[idAparecer];
 
     var clik = document.createElement('a');
-    clik.setAttribute('onclick', '');
+    clik.setAttribute('onclick', 'mapinha('+idAparecer+')');
 
     var city = resposta.features[idAparecer].place_name;
 
@@ -64,3 +64,14 @@ function aparecer(idAparecer){
     document.getElementById('procurar').appendChild(novaLi);
 }
 
+function mapinha(id){
+    var latitude, longitude;
+    var nome;
+    latitude = terminado.features[id].geometry.coordinates[1];
+    longitude = terminado.features[id].geometry.coordinates[0];
+    nome = terminado.features[id].place_name;
+    mapa(latitude, longitude, nome);
+    var meuMapa = L.map('').setView([latitude, longitude], 15);
+    
+
+}
