@@ -87,5 +87,5 @@ function mapinha(id){
         color: 'green',
         fillColor: '#f03',
         fillOpacity: 0.5
-    }).addTo(mymap).bindPopup("Você é estranho! Estás clicando em um círculo!");
+    })//.addTo(mymap).bindPopup("Você é estranho! Estás clicando em um círculo!");
 }
