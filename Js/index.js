@@ -68,7 +68,7 @@ function aparecer(idAparecer){
 function mapinha(id){
     latitude = resposta.features[id].geometry.coordinates[1];
     longitude = resposta.features[id].geometry.coordinates[0];
-    nome = resposta.features[id].place_name;
+    local = resposta.features[id].place_name;
     
     var meuMapa = L.map('localizar').setView([latitude, longitude], 15);
 
@@ -81,11 +81,10 @@ function mapinha(id){
     }).addTo(meuMapa);
    
     L.marker([latitude, longitude]).addTo(meuMapa)
-        .bindPopup("<b>Você está em " + nome).openPopup();  
+        .bindPopup("Localizado: " + local).openPopup();  
    
     L.circle([latitude, longitude], 400, {
-        color: 'green',
+        color: 'red',
         fillColor: '#f03',
-        fillOpacity: 0.5
-    })//.addTo(mymap).bindPopup("Você é estranho! Estás clicando em um círculo!");
-}
+        fillOpacity: 0.5,
+})} 
