@@ -70,8 +70,24 @@ function mapinha(id){
     latitude = terminado.features[id].geometry.coordinates[1];
     longitude = terminado.features[id].geometry.coordinates[0];
     nome = terminado.features[id].place_name;
-    mapa(latitude, longitude, nome);
-    var meuMapa = L.map('').setView([latitude, longitude], 15);
     
+    var meuMapa = L.map('localizar').setView([latitude, longitude], 15);
 
+    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiY2ZsYmVkdWNhdG9yIiwiYSI6ImNrMTZrYm1vNTA1dWEzaGxqN2tmMTZlazcifQ.XXsWkpgiguegb-C7WQpGBA', {
+        maxZoom: 18,
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+            '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+            'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        id: 'mapbox.streets'
+    }).addTo(meuMapa);
+   
+    L.marker([latitude, longitude]).addTo(meuMapa)
+        .bindPopup("<b>Você está em " + nome).openPopup();
+   
+    L.circle([latitude, longitude], 400, {
+        color: 'red',
+        fillColor: '#f03',
+        fillOpacity: 0.5
+    }).addTo(mymap).bindPopup("Você é estranho! Estás clicando em um círculo!");
+}
 }
