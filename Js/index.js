@@ -60,8 +60,9 @@ function aparecer(idAparecer){
     var city = resposta.features[idAparecer].place_name;
 
     var nvNome = document.createTextNode(city);
-    novaLi.appendChild(nvNome);
-    document.getElementById('procurar').appendChild(novaLi);
+    clik.appendChild(nvNome);
+    lista_ordenada.appendChild(clik);
+    document.getElementById('procurar').appendChild(lista_ordenada);
 }
 
 function mapinha(id){
