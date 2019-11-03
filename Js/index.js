@@ -86,7 +86,7 @@ function mapinha(id){
         .bindPopup("<b>Você está em " + nome).openPopup();
    
     L.circle([latitude, longitude], 400, {
-        color: 'red',
+        color: 'green',
         fillColor: '#f03',
         fillOpacity: 0.5
     }).addTo(mymap).bindPopup("Você é estranho! Estás clicando em um círculo!");
