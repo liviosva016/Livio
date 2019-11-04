@@ -37,7 +37,9 @@ function fFor(){
 
     var i;
     for(i=0; i<corpo; i++){
-        aparecer(i);
+        
+        aparecer(resultado.features[i].place_name);
+        
     }
 }
 
@@ -48,14 +50,14 @@ function nvOl(){
 }
 
 nvOl();
-function aparecer(idAparecer){
+function aparecer(idAparecer, id){
     var novaLi = document.createElement("li");
     novaLi.setAttribute('id', idAparecer);
         
     var nome = resposta.features[idAparecer];
 
     var clik = document.createElement('a', 'li');
-    
+
     clik.setAttribute('onclick', 'mapinha('+idAparecer+')');
 
     var city = resposta.features[idAparecer].place_name;
