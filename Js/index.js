@@ -23,7 +23,7 @@ var linkr = montaLink();
 resultado.open('GET', linkr, true);
 
 resultado.onreadystatechange = function (e){
-   /* console.log(this.readyState);*/
+    console.log(this.readyState);
     if (this.readyState == 4) {
         resposta = JSON.parse(this.response);
         console.log(JSON.parse(this.response));
