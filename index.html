@@ -10,16 +10,23 @@
     <link rel="stylesheet" href="Css/index.css">
 </head>
 <body>
-    
-    <h2>Procurar Cidade</h2>
+   <header>    
+        <center><div class="box">
+            <h2 class="procurar_cidade"><a class="cor">Pro<span>cur</span>ar Ci<span>da</span>de</a></h2>
+            <input class="busca" id="cidade" type="text" name="Procurar Cidade" placeholder="Procurar Cidade"> </input><br>
+            <br>
+            <button onclick='pesquisa()'>Procurar</button>
+        </div></center>
+    </header>
+    <!--<h2>Procurar Cidade</h2>
     <input id="cidade" type="text" name="Procurar Cidade" placeholder="Procurar Cidade"> </input>
     <br>
-    <button onclick='pesquisa()'>Procurar</button>
+    <button onclick='pesquisa()'>Procurar</button>-->
     <div id="procurar">
         
     </div>
     <div id="localizar" style=" height: 500px;">
-        
+        <div id='localizar' style='width: auto; height: 300px;'></div>
     </div>
     
     <script src="Js/index.js"></script> 
