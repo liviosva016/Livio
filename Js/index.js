@@ -49,12 +49,12 @@ function nvOl(){
 
 nvOl();
 function aparecer(idAparecer, i){
-    var novaLi = document.createElement("li");
+    var novaLi = document.createElement('li');
     novaLi.setAttribute('id', idAparecer);
         
     var nome = resposta.features[idAparecer];
 
-    var clik = document.createElement('a', 'li');
+    var clik = document.createElement('a');
 
     clik.setAttribute('onclick', 'mapinha('+idAparecer+')');
 
