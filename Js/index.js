@@ -54,7 +54,8 @@ function aparecer(idAparecer){
         
     var nome = resposta.features[idAparecer];
 
-    var clik = document.createElement('a');
+    var clik = document.createElement('a', 'li');
+    
     clik.setAttribute('onclick', 'mapinha('+idAparecer+')');
 
     var city = resposta.features[idAparecer].place_name;
@@ -70,7 +71,7 @@ function mapinha(id){
     longitude = resposta.features[id].geometry.coordinates[0];
     local = resposta.features[id].place_name;
     
-    var meuMapa = L.map('localizar').setView([latitude, longitude], 15);
+var meuMapa = L.map('localizar').setView([latitude, longitude], 15);
 
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiY2ZsYmVkdWNhdG9yIiwiYSI6ImNrMTZrYm1vNTA1dWEzaGxqN2tmMTZlazcifQ.XXsWkpgiguegb-C7WQpGBA', {
         maxZoom: 18,
