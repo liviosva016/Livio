@@ -15,7 +15,7 @@ function montaLink (){
 }
 
 function pesquisa(){
-document.getElementById('procurar')
+document.getElementById('procurar').innerHTML="";
 var resultado = new XMLHttpRequest();
 
 var linkr = montaLink();
@@ -48,9 +48,9 @@ function nvOl(){
     document.getElementById('procurar').appendChild(armazena);
 }
 
-function limpa_tela(){
+/*function limpa_tela(){
     document.getElementById("procurar").innerHTML="";
-}
+}*/
 
 nvOl();
 function aparecer(idAparecer){
