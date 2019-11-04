@@ -12,6 +12,8 @@ function montaLink (){
     var final = '.json?access_token=pk.eyJ1IjoiY2ZsYmVkdWNhdG9yIiwiYSI6ImNrMTZrYm1vNTA1dWEzaGxqN2tmMTZlazcifQ.XXsWkpgiguegb-C7WQpGBA';   
     
     return comeco + recebeCity + final;
+
+    limpa_tela();
 }
 
 function pesquisa(){
@@ -45,6 +47,10 @@ function nvOl(){
     var armazena = document.createElement('ol');
     armazena.setAttribute('id', 'lista_ordenada');
     document.getElementById('procurar').appendChild(armazena);
+}
+
+function limpa_tela(){
+    document.getElementById("procurar").innerHTML=""
 }
 
 nvOl();
