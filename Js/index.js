@@ -12,9 +12,9 @@ function montaLink (){
     var final = '.json?access_token=pk.eyJ1IjoiY2ZsYmVkdWNhdG9yIiwiYSI6ImNrMTZrYm1vNTA1dWEzaGxqN2tmMTZlazcifQ.XXsWkpgiguegb-C7WQpGBA';   
     
     return comeco + recebeCity + final;
-
-    limpa_tela();
 }
+
+limpa_tela();
 
 function pesquisa(){
 var resultado = new XMLHttpRequest();
@@ -50,7 +50,7 @@ function nvOl(){
 }
 
 function limpa_tela(){
-    document.getElementById("procurar").innerHTML=""
+    document.getElementById("procurar").innerHTML="";
 }
 
 nvOl();
