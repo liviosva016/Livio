@@ -15,7 +15,7 @@ function montaLink (){
 }
 
 function pesquisa(){
-document.getElementById('procurar').innerHTML="";
+document.getElementById('cidade').innerHTML="";
 var resultado = new XMLHttpRequest();
 
 var linkr = montaLink();
@@ -23,7 +23,7 @@ var linkr = montaLink();
 resultado.open('GET', linkr, true);
 
 resultado.onreadystatechange = function (e){
-    console.log(this.readyState);
+   /* console.log(this.readyState);*/
     if (this.readyState == 4) {
         resposta = JSON.parse(this.response);
         console.log(JSON.parse(this.response));
@@ -34,7 +34,7 @@ resultado.send();
 }
 
 function fFor(){
-    var corpo = resposta.features.length;
+    var corpo = resposta.features.length/*;*/
 
     var i;
     for(i=0; i<corpo; i++){
@@ -48,15 +48,11 @@ function nvOl(){
     document.getElementById('procurar').appendChild(armazena);
 }
 
-/*function limpa_tela(){
-    document.getElementById("procurar").innerHTML="";
-}*/
-
 nvOl();
 function aparecer(idAparecer){
     var novaLi = document.createElement('li');
     novaLi.setAttribute('id', idAparecer);
-        
+
     var nome = resposta.features[idAparecer];
 
     var clik = document.createElement('a');
