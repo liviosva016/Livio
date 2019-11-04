@@ -14,9 +14,8 @@ function montaLink (){
     return comeco + recebeCity + final;
 }
 
-limpa_tela();
-
 function pesquisa(){
+document.getElementById('procurar')
 var resultado = new XMLHttpRequest();
 
 var linkr = montaLink();
