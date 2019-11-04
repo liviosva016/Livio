@@ -37,7 +37,7 @@ function fFor(){
 
     var i;
     for(i=0; i<corpo; i++){
-        aparecer(resposta.features[i].place_name, i);
+        aparecer(i);
     }
 }
 
@@ -48,7 +48,7 @@ function nvOl(){
 }
 
 nvOl();
-function aparecer(idAparecer, i){
+function aparecer(idAparecer){
     var novaLi = document.createElement('li');
     novaLi.setAttribute('id', idAparecer);
         
