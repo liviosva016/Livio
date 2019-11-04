@@ -37,9 +37,7 @@ function fFor(){
 
     var i;
     for(i=0; i<corpo; i++){
-        
-        aparecer(resultado.features[i].place_name);
-        
+        aparecer(resposta.features[i].place_name, i);
     }
 }
 
@@ -50,7 +48,7 @@ function nvOl(){
 }
 
 nvOl();
-function aparecer(idAparecer, id){
+function aparecer(idAparecer, i){
     var novaLi = document.createElement("li");
     novaLi.setAttribute('id', idAparecer);
         
