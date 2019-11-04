@@ -23,3 +23,8 @@ input {
 .cor{
 	font-size: 40px;
 }
+body {
+	margin: 0;
+	padding: sans-serif;
+	background: linear-gradient(to right, #00f9ff, #0861f3);
+}
